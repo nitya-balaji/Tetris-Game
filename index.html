@@ -1,0 +1,47 @@
+<html>
+<head>
+    <title>Tetris Game!</title>
+    <style>
+      body {
+        background: #202028;
+        color: #fff;
+        font-family: sans-serif;
+        font-size: 2em;
+        text-align: center;
+      }
+      canvas {
+        border: solid .2em #fff;
+        height: 90vh;
+      }
+      button {
+        margin-top: 10px;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+
+      #toggle-music { /* this is for changes to the toggle music (play/stop music) button's position and visibility */
+        position: absolute;
+        top: 10px; /* vertical position */
+        right: 10px; /* horizontal position */
+        padding: 10px 20px; /* making the button larger */
+        font-size: 14px; /* adjusting font size within the button */
+        background-color: #fff; /* background color of the button */
+        color: #000; /* text color of the button */
+        border: 1px solid #000; /* border added to the button */
+        border-radius: 5px; /* include rounded corners for the button */
+        cursor: pointer; 
+    }
+    #toggle-music:hover {
+        background-color: #ccc; /* Change background color of button on hover */
+    }
+    </style>
+</head>
+<body>
+  <div id="score"></div>
+  <canvas id="tetris" width="240" height="400"></canvas>
+  <button id="toggle-music">Play/Stop Music</button> <!-- For toggling music -->
+  <audio id="background-music" src="sounds/background.mp3" loop></audio>
+  <script src="tetris.js"></script>
+</body>
+</html>
